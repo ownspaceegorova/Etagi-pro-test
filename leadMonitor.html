@@ -16,15 +16,18 @@
         <main>
             <div class="enter_window">
                 <div class="enter_window-content">
+                    <form class="js-form"></form>
                     <div class="header-enter-window">
                         <img src="images/enter-window-logo.png" class="enter-window-logo">
                         <span class="h1-enter-window">LeadMonitor</span>
                         </div>
                     <div class="enter-window-forms">
                         <div class="enter-window-forms name-input">Аккаунт</div>
-                        <input type='text' name='accaunt' class='form name' placeholder="Введите имя аккаунта">
+                        <input type='text' name='accaunt' class='form-input name' placeholder="Введите имя аккаунта">
+                        <p class="empty-login"></p>
                         <div class="enter-window-forms name-input password-input">Пароль</div>
-                        <input type='password' name='password' class='form password' placeholder="●●●●●●●●">
+                        <input type='password' name='password' class='form-input password' placeholder="●●●●●●●●">
+                        <p class="empty-password"></p>
                     </div>
                     <div class="checkbox-link">
                         <div class="first-checkbox">
@@ -39,7 +42,8 @@
                         </div>
                     </div>
                     <div class="button-enter-main">
-                    <button class="button-enter">Войти</button>
+                    <button class="buttonenter" type="submit" id="submit" onclick="window.location.href = 'lead-screen.html'">Войти</button>
+                </form>
                     </div>
                 </div>
             </div>
@@ -48,5 +52,6 @@
                 <div class="whats-new-text">v1.0 <a href="whatsnew.html" class='whats-new'>Что нового?</a></div>
             </div>
         </main>
+       
     </body>
 </html>

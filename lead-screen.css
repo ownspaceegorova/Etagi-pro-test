@@ -1,0 +1,110 @@
+.header {
+    display: flex;
+}
+
+.header-enter-window {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 1440px;
+    height: 55px;
+    padding-inline: 50px;
+    padding-top: 15px;
+}
+
+.h1-enter-window {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #171F46;
+    margin-left: 10px;
+    
+}
+
+.header-logo {
+    width: 155px;
+    height: 32px;
+    display: inline-flex;
+}
+
+.city-block {
+    margin-right: 5px;
+}
+
+.city-choose {
+    width: 156px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
+    padding-left: 14px;
+}
+
+.login-form {
+    width: 156px;
+    height: 42px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #667085;
+    padding-left: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.header-blocks {
+    display: flex;
+}
+
+.icon-login {
+    width: 18px;
+    height: 18px;
+}
+
+.login-name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1D2939;
+    padding-left:8px;
+}
+
+.img-line {
+    width: 100%;
+}
+
+.chosen-city-block {
+    width: 127px;
+    padding-left: 14px;
+    margin-top: 49px;
+    margin-left: 50px;
+}
+
+.chosen-city {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    color: #101828;
+    width: 127px;
+    height: 38px;
+}
+
