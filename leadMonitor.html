@@ -9,25 +9,24 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <script src="leadMonitor-autorization.js"></script>
         <title>Lead Monitor</title>
     </head>
     <body>
         <main>
             <div class="enter_window">
                 <div class="enter_window-content">
-                    <form class="js-form"></form>
+                    <form id="login-form">
                     <div class="header-enter-window">
                         <img src="images/enter-window-logo.png" class="enter-window-logo">
                         <span class="h1-enter-window">LeadMonitor</span>
                         </div>
                     <div class="enter-window-forms">
                         <div class="enter-window-forms name-input">Аккаунт</div>
-                        <input type='text' name='accaunt' class='form-input name' placeholder="Введите имя аккаунта">
-                        <p class="empty-login"></p>
-                        <div class="enter-window-forms name-input password-input">Пароль</div>
-                        <input type='password' name='password' class='form-input password' placeholder="●●●●●●●●">
-                        <p class="empty-password"></p>
+                        <input type='text' name='accaunt' class='form-input name' placeholder="Введите имя аккаунта" id="username-field">
+                        <p class="empty-login" id="empty-login">Аккаунт не найден</p>
+                        <div class="enter-window-forms name-input password-input" >Пароль</div>
+                        <input type='password' name='password' class='form-input password' placeholder="●●●●●●●●" id="password-field">
+                        <p class="empty-password" id="empty-password">Неверный пароль</p>
                     </div>
                     <div class="checkbox-link">
                         <div class="first-checkbox">
@@ -42,9 +41,9 @@
                         </div>
                     </div>
                     <div class="button-enter-main">
-                    <button class="buttonenter" type="submit" id="submit" onclick="window.location.href = 'lead-screen.html'">Войти</button>
-                </form>
+                    <button class="buttonenter" type="submit" id="login-form-submit" value="Login">Войти</button>
                     </div>
+                    </form>
                 </div>
             </div>
             <div class="enter-footer">
@@ -52,6 +51,6 @@
                 <div class="whats-new-text">v1.0 <a href="whatsnew.html" class='whats-new'>Что нового?</a></div>
             </div>
         </main>
-       
+        <script src="leadMonitor-autorization.js"></script>
     </body>
 </html>
