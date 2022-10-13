@@ -10,6 +10,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
         <script src="leadMonitor-autorization.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
         <title>Lead Monitor</title>
     </head>
     <body>
@@ -70,10 +74,20 @@
                     </div>
                 </div>
                 </div>
-                <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+                <div class="datapicker-calendar">
+                    <div class="search-title lead">Период</div>
+                    <input type="text" name="daterange" value="07/07/2022 - 08/07/2022" class="caledar-form"/>
+                    <script>
+                    $(function() {
+                    $('input[name="daterange"]').daterangepicker({
+                    opens: 'left'
+                    }, function(start, end, label) {
+                    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                    });
+                    });
+                    </script>
+                </div>
+            
             </div>
             </div>
         </main>
