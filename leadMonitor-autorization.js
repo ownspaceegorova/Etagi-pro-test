@@ -23,5 +23,3 @@ loginButton.addEventListener("click", (e) => {
         paragraph2.classList.add('error-text');
     }
 })
-
-paragraph.append(' А разработчиком — ещё лучше!');
