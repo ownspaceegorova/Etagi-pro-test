@@ -106,8 +106,8 @@ display: flex;
     display: inline-flex;
     width: 18px;
     height: 18px;
-    background:white;
-    color: #344054;;
+    background: #F9F5FF;;
+    color:#0F6BFF;
     justify-content: center;
     border: 1px solid #D0D5DD;
     border-radius: 4px;
@@ -116,6 +116,14 @@ display: flex;
     content: "\2714";
     opacity: 0;
     transition: 0.2s;
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: #F9F5FF;;
+    color:#0F6BFF;
+    justify-content: center;
+    border: 1px solid #0F6BFF;
+    border-radius: 4px;
   }
   .checkbox:checked + .fake::before {
     opacity: 1;
