@@ -9,7 +9,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <script src="leadMonitor-autorization.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -289,7 +288,6 @@
                         <td class="table-rows"><img src="images/trash.png"></td>
                       </tr>
                     </tbody>
-                    <script src="lead-screen.js"></script>
                   </table>
             </div>
         </div>
@@ -299,11 +297,11 @@
                 <div class="leads-number-background">
                     <div><button class="amount-of-number choosen-number">20</div>
                 </div>
-                <div><button class="amount-of-number">50</div>
-                <div><button class="amount-of-number">100</div>
+                <div><button id="amount-of-number" class="amount-of-number">50</div>
+                <div><button class="amount-of-number">100 </div>
                 <div class="text-of-number">Все</div>
             </div>
-            <div class="number-of-page">
+            <div class="number-of-page" id="number-of-page">
                 <div class="page-text-main">
                     <div class="arrow-left"><img src="images/arrow-left.png"></div>
                     <div><button class="page-text">Предыдущая</div>
@@ -320,6 +318,7 @@
                         <div><button class="page-text">Следующая</div>
                         <div class="arrow-left"><img src="images/arrow-right.png"></div>
                     </div>
+                    <script src="lead-screen.js"></script>
             </div>
         </div>
         </main>
