@@ -31,11 +31,23 @@ for(let i=0; i<checkboxesPrevios.length;i++){
 }
 
 function ChangeCheckboxStyle () {
+  if (this.classList.contains ('fake')){
   this.classList.remove('fake');
   this.classList.add('chek');
+  }
 
+  else {
+    this.classList.remove('chek');
+    this.classList.add('fake');
+  }
+  
   if (this.classList.contains('chek')) {
     archiveLeads.classList.add('active');
   }
+  else {
+    archiveLeads.classList.remove('active');
+  }
 }
+
+
   
