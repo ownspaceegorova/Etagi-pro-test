@@ -23,3 +23,19 @@ for (i = 0; number.length > i; i++) {
       this.classList.add("choosen-page");
   };
 }
+
+let checkboxesPrevios = document.getElementsByClassName('fake');
+let archiveLeads = document.getElementById('archive-dedicated');
+for(let i=0; i<checkboxesPrevios.length;i++){
+  checkboxesPrevios[i].addEventListener('click', ChangeCheckboxStyle);
+}
+
+function ChangeCheckboxStyle () {
+  this.classList.remove('fake');
+  this.classList.add('chek');
+
+  if (this.classList.contains('chek')) {
+    archiveLeads.classList.add('active');
+  }
+}
+  
