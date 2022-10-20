@@ -49,5 +49,12 @@ function ChangeCheckboxStyle () {
   }
 }
 
+let popup = document.getElementById("popupArchive");
+let popupButton = document.getElementById("popup-button");
+popupButton.onclick = function PopUpShow() {
+  popup.classList.toggle("show");
+  console.log('jjj');
+}
+
 
   

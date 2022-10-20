@@ -746,11 +746,55 @@ li {
     position: absolute;
     margin-left: 318px;
     margin-top: 40px;
-    width: 230px;
+    width: 240px;
     display: block;
     justify-content: space-between;
 }
 
 .archive-text {
     margin-left: 20px;
+}
+
+.popup-button {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    visibility:hidden ;
+}
+
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    width: 400px;
+    height: 220px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    border-radius: 12px;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
