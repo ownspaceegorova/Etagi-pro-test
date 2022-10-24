@@ -523,6 +523,8 @@ li {
       }
     .table-screen {
         margin-left: 306px;
+        width: 946px;
+        overflow-x: scroll;
     }
 
       .main-table {
@@ -531,6 +533,7 @@ li {
         display: grid;
         border-collapse: collapse;
         margin-right: 140px;
+        -webkit-overflow-scrolling: touch;
         grid-template-columns: 
         minmax(47px, 47px)
         minmax(165px, 165px)
@@ -540,6 +543,17 @@ li {
         minmax(150px, 150px)
         minmax(150px, 150px)
         minmax(115px, 115px)
+        minmax(150px, 150px)
+        minmax(111px, 111px)
+        minmax(121px, 121px)
+        minmax(150px, 150px)
+        minmax(150px, 150px)
+        minmax(115px, 115px)
+        minmax(150px, 150px)
+        minmax(111px, 111px)
+        minmax(121px, 121px)
+        minmax(150px, 150px)
+        minmax(150px, 150px)
         minmax(65px, 65px)
       }
       
