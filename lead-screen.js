@@ -34,27 +34,30 @@ function ChangeCheckboxStyle () {
   if (this.classList.contains ('fake')){
   this.classList.remove('fake');
   this.classList.add('chek');
-  }
-
-  else {
+  }else {
     this.classList.remove('chek');
     this.classList.add('fake');
   }
-  
+  checkArxiv();
   if (this.classList.contains('chek')) {
     archiveLeads.classList.add('active');
-  }
-  else {
+  }else {
     archiveLeads.classList.remove('active');
   }
+}
+
+function checkArxiv(){
+
 }
 
 let popup = document.getElementById("popupArchive");
 let popupButton = document.getElementById("popup-button");
 popupButton.onclick = function PopUpShow() {
   popup.classList.toggle("show");
-  console.log('jjj');
 }
 
-
+let popupClose =  document.getElementById ("popup-cansel");
+popupClose.onclick = function closePopupWindow () {
+  popup.classList.toggle("show");
+}
   
