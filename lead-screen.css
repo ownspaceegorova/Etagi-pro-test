@@ -522,9 +522,9 @@ li {
         opacity: 1;
       }
     .table-screen {
-        margin-left: 306px;
-        width: 946px;
-        overflow-x: scroll;
+        margin-left: 324px;
+        width: 1064px;
+        display: flex;
     }
 
       .main-table {
@@ -532,8 +532,8 @@ li {
         flex: 1;
         display: grid;
         border-collapse: collapse;
-        margin-right: 140px;
         -webkit-overflow-scrolling: touch;
+        overflow-x: scroll;
         grid-template-columns: 
         minmax(47px, 47px)
         minmax(165px, 165px)
@@ -544,7 +544,6 @@ li {
         minmax(150px, 150px)
         minmax(115px, 115px)
         minmax(150px, 150px)
-        minmax(111px, 111px)
         minmax(121px, 121px)
         minmax(150px, 150px)
         minmax(150px, 150px)
@@ -558,6 +557,10 @@ li {
         minmax(65px, 65px)
       }
       
+::-webkit-scrollbar {
+    display: none;
+}
+
       .main-table-head,
       .main-table-body,
       .main-table-tr {
@@ -643,6 +646,17 @@ li {
         font-size: 14px;
         line-height: 20px;
       }
+
+
+.settings-table {
+    margin-top: -1.8px;
+    margin-left: -3px;
+}
+
+.fixed-side {
+    line-height: 13.5px;
+}
+    
 
       .footer {
         margin-top: 105px;
@@ -892,3 +906,4 @@ li {
 .popup-archive:hover {
     background: #C72323;
 }
+
