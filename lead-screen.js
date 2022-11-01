@@ -60,4 +60,18 @@ let popupClose =  document.getElementById ("popup-cansel");
 popupClose.onclick = function closePopupWindow () {
   popup.classList.toggle("show");
 }
-  
+
+let emptyCustom = document.getElementById("custom-button");
+let parent = document.getElementById("direction-botton");
+emptyCustom.onclick = function createCustom () {
+    emptyCustom.parentNode.removeChild(emptyCustom);
+    let botton = document.createElement("botton");
+    botton.innerHTML = "Кастомное";
+    parent.appendChild(botton);
+    botton.classList.add('direction-rent'); 
+}
+
+const direction = querySelectorAll("div.direction");
+direction.onclick = function activeDirectionSwich () {
+    console.log('djjfj')
+}

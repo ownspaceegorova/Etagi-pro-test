@@ -338,7 +338,7 @@ input {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 23px;
     color: #667085;
     position: absolute;
 }
@@ -363,6 +363,21 @@ li {
     align-items: center;
    }
 
+   .active-direction {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0F6BFF;
+    background: #F5FAFF;
+    border-radius: 6px;
+    width: 110%;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+   }
+
 
 .direction {
     margin-bottom: 20px;
@@ -373,7 +388,6 @@ li {
 
 .direction-rent {
     margin-bottom: 20px;
-    padding-left: 12px; 
     padding-left: 45px;
 }
 
@@ -383,11 +397,9 @@ li {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 25px;
     color: #0F6BFF;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;   
+    align-items: center; 
 }
 
 .rent3 {
@@ -415,6 +427,10 @@ li {
     width: 177px;
     height: 28px;
     border-radius: 8px;
+}
+
+.ipoteka {
+    margin-top: 19px;
 }
 
 
@@ -654,11 +670,31 @@ li {
 }
 
 .not-answer {
+    color: #B54708;
+    margin-left: -2px;
+}
 
+.not-answer-border {
+    border-radius: 16px;
+    background:#FFFAEB;
+    background-size: 6px;
+    display: inline;
+    white-space: pre-wrap;
+    padding: 2px 12px;  
 }
 
 .otkaz {
+    color: #B42318;
+    margin-left: -2px;
+}
 
+.otkaz-border {
+    border-radius: 16px;
+    background:#FEF3F2;
+    background-size: 6px;
+    display: inline;
+    white-space: pre-wrap;
+    padding: 2px 12px;   
 }
 
 .potrebnost-border {
