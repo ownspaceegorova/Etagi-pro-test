@@ -71,7 +71,17 @@ emptyCustom.onclick = function createCustom () {
     botton.classList.add('direction-rent'); 
 }
 
-const direction = querySelectorAll("div.direction");
-direction.onclick = function activeDirectionSwich () {
-    console.log('djjfj')
+let menu = document.getElementsByClassName('menu');
+let direction = document.getElementsByClassName('direction');
+for (i = 0; direction.length > i; i++) {
+  direction[i].onclick = function() {
+    console.log('djjfj');
+    if (this.classList.contains ('direction')){
+      this.classList.remove('direction');
+      this.classList.add('active-direction');
+      }else {
+        this.classList.remove('active-direction');
+        this.classList.add('direction');
+      }
+}
 }
