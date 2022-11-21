@@ -395,6 +395,7 @@ li {
     font-weight: 500;
     font-size: 14px;
     line-height: 25px;
+    display: flex;
 }
 
 
@@ -1022,3 +1023,12 @@ li {
     background: #C72323;
 }
 
+.plane {
+    margin-left: 100px;
+    display: none;
+}
+
+.plane-active {
+    margin-left: 100px;
+    display: unset;
+}
