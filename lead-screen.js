@@ -76,13 +76,52 @@ let menu = document.getElementsByClassName('menu');
 let direction = document.getElementsByClassName('direction');
 for (i = 0; direction.length > i; i++) {
   direction[i].onclick = function() {
+    let childPlane = this.querySelector('.plane');
+    let childCircle = this.querySelector('.container-number')
     if (this.classList.contains ('direction')){
       this.classList.remove('direction');
       this.classList.add('active-direction');
-}
+      if (this.classList.contains ('active-direction')) {
+      childPlane.classList.toggle('plane-active')
+      childCircle.classList.toggle('container-number-hide')
+     }
+      }
+    
       else {
         this.classList.remove('active-direction');
         this.classList.add('direction');
+        childPlane.classList.remove('plane-active')
+        childPlane.classList.add('plane')
+        childCircle.classList.remove('container-number-hide')
+        childCircle.classList.add('container-number')
       }
+
 }
 }
+
+let directionRent = document.getElementsByClassName('direction-rent');
+for (i = 0; directionRent.length > i; i++) {
+  directionRent[i].onclick = function() {
+    let childPlane = this.querySelector('.plane');
+    let childCircle = this.querySelector('.container-number')
+    if (this.classList.contains ('direction-rent')){
+      this.classList.remove('direction-rent');
+      this.classList.add('direction-rent-active');
+      if (this.classList.contains ('direction-rent-active')) {
+      childPlane.classList.toggle('plane-active')
+      childCircle.classList.toggle('container-number-hide')
+     }
+      }
+    
+      else {
+        this.classList.remove('direction-rent-active');
+        this.classList.add('direction-rent');
+        childPlane.classList.remove('plane-active')
+        childPlane.classList.add('plane')
+        childCircle.classList.remove('container-number-hide')
+        childCircle.classList.add('container-number')
+      }
+  }
+}
+
+

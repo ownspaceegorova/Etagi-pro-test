@@ -465,7 +465,7 @@
             </div>
         </div>
         <div class="archive-dedicated" id="archive-dedicated"><button class="popup-button" id="popup-button"><img src="images\trash-red.png"><span class="archive-text">Архивировать выделенное</span></button></div>
-
+        <div class="send-notification" id="send-notification"></div>
         <div class="footer">
             <div class="number-leads">
                 <div class="text-of-number">Отображать:</div>
@@ -494,6 +494,48 @@
                         <div class="arrow-left"><img src="images/arrow-right.png"></div>
                     </div>
                     <script src="lead-screen.js"></script>
+            </div>
+            <div class="popupNotif" id="popupNotif">
+               <div class="popup-notif-title">
+                Подключить уведомления
+              </div>
+              <div class="popup-notif-subtitle">
+                Текущие пользователи получают уведомления:
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Петрова Анастасия (HR)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Иванов Ваня (риетор)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Егорова Лиза (контекст ЦО)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="add-person">Добавить</div>
+              <div class="person-block">
+                <select class="person-choose">
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"></div><div class="main-name">Выберите пользователя</div></option>
+                    <option><button class="new-person"><img src="images/plus.png" class="img-plus-person"><div class="add-new-person"> Подключить нового</div></button></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">@gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">@mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">@coolweb</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">@gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">@mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">@coolweb</div></option>
+                </select>
+            </div>
             </div>
         </div>
         </main>

@@ -422,8 +422,25 @@ li {
     line-height: 25px;
     color: #0F6BFF;
     align-items: center; 
+    border: none;
+    background: none;
 }
 
+.direction-rent-active {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    color: #0F6BFF;
+    align-items: center; 
+    border: none;
+    background: none;
+    align-items: center;
+    padding-left: 45px;
+    height: 36px;
+    margin-bottom: 13px;
+}
 
 .custom-button {
     width: 177px;
@@ -1029,6 +1046,136 @@ li {
 }
 
 .plane-active {
-    margin-left: 100px;
+    margin-left: 20px;
     display: unset;
+
+}
+
+.container-number-hide {
+    display: none;
+}
+
+.send-notification {
+    display: none;
+}
+
+.popupNotif {
+    height: 446px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    border-radius: 12px;
+    margin-left: 520px;
+    margin-top: -896px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.show-popup-add-person {
+    visibility: unset;
+}
+
+.popup-notif-title {
+    width: 352px;
+    height: 7px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #101828;
+}
+
+.popup-notif-subtitle {
+    width: 352px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+}
+
+.person-to-send {
+    display: inline-flex;
+    width: 352px;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px
+}
+
+.person-account {
+    display: inline-block;
+}
+
+.name-surname {
+    width: 200px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+}
+
+.telegram-id {
+    width: 167px;
+    height: 20px; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px; 
+    color: #667085;
+}
+
+.notif-status {
+    width: 78px;
+    height: 20px;
+    border: none;
+    background: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #B42318;
+}
+
+.add-person {
+    width: 352px;
+    height: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+    text-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px #F4EBFF;
+}
+.person-block {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 8px;
+    width: 352px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid #468DFF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05), 0px 0px 0px 4px #EBF2FF;
+    border-radius: 8px;
+}
+
+.person-choose {
+    border: none;
 }
