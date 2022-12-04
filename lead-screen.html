@@ -106,21 +106,21 @@
             <div class="main-content-page">
             <div class="menu-select">
                 <ul class="menu">
-                    <li><button class="direction">ВСЕ <div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">Вторичная<div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">Загородная<div class="plane"><img src="images/plane.png"></div> <div class=container-number><span class="span"></span><span class=text>10</span></div></button></li>
-                    <li><button class="direction">Новостройки<div class="plane"><img src="images/plane.png"></div></button></li>
-                     <li><button class="direction">Аренда<div class="plane"><img src="images/plane.png"></div> <div class=container-number><span class="span"></span><span class=text>6</span></div></button>
-                         <li><button class="direction-rent rent">Снять<div class="plane"><img src="images/plane.png"></div></button></li>
-                          <li><button class="direction-rent">Сдать<div class="plane"><img src="images/plane.png"></div> <div class=container-number><span class="span"></span><span class=text>6</span></div></button></li> 
-                          <li><button class="direction-rent rent3">Кастомное <div class="plane"><img src="images/plane.png"></div><div class=container-number><span class="span"></span><span class=text>10</span></div></button></li>  
+                    <li><div class="direction-menu"><button class="direction">ВСЕ <div class="plane"><img src="images/plane.png" class="img-plane"></div></button></div></li>
+                    <li><button class="direction">Вторичная<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                    <li><button class="direction">Загородная<div class="plane"><img src="images/plane.png" class="img-plane"></div> <div class=container-number><span class="span"></span><span class=text>10</span></div></button></li>
+                    <li><button class="direction">Новостройки<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                     <li><button class="direction">Аренда<div class="plane"><img src="images/plane.png" class="img-plane"></div> <div class=container-number><span class="span"></span><span class=text>6</span></div></button>
+                         <li><button class="direction-rent rent">Снять<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                          <li><button class="direction-rent">Сдать<div class="plane"><img src="images/plane.png" class="img-plane"></div> <div class=container-number><span class="span"></span><span class=text>6</span></div></button></li> 
+                          <li><button class="direction-rent rent3">Кастомное <div class="plane"><img src="images/plane.png" class="img-plane"></div><div class=container-number><span class="span"></span><span class=text>10</span></div></button></li>  
                           <li class="direction-botton botton-rent" id="direction-botton"><button class="custom-button" id="custom-button">+</button></li>         
                      </li>
-                    <li><button class="direction ipoteka">Ипотека<div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">Коммерческая<div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">Межрегиональные<div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">HR<div class="plane"><img src="images/plane.png"></div></button></li>
-                    <li><button class="direction">Прочее<div class="plane"><img src="images/plane.png"></div></button></li>
+                    <li><button class="direction ipoteka">Ипотека<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                    <li><button class="direction">Коммерческая<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                    <li><button class="direction">Межрегиональные<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                    <li><button class="direction">HR<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
+                    <li><button class="direction">Прочее<div class="plane"><img src="images/plane.png" class="img-plane"></div></button></li>
                    </ul>
             </div>
             <div class="table-screen">
@@ -425,7 +425,7 @@
                   
                     <table class="settings-table">
                         <thead class="main-table-head">
-                          <th data-type="icon-table" class="table-header fixed-side"><img src="images\settings-blue.png" class="settings-icon"> <span class="resize-handle"></span></th>
+                          <th data-type="icon-table" class="table-header fixed-side"><img src="images\settings-blue.png" class="settings-icon" id="settings-icon"> <span class="resize-handle"></span></th>
                         </thead>
                         <tbody class="settings-table-body">
                           <tr class="settings-table-tr">
@@ -525,17 +525,32 @@
               </div>
               <div class="add-person">Добавить</div>
               <div class="person-block">
-                <select class="person-choose">
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"></div><div class="main-name">Выберите пользователя</div></option>
-                    <option><button class="new-person"><img src="images/plus.png" class="img-plus-person"><div class="add-new-person"> Подключить нового</div></button></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">@gnom</div></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">@mcegorov</div></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">@coolweb</div></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">@gnom</div></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">@mcegorov</div></option>
-                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">@coolweb</div></option>
+                <select class="person-choose" onchange="window.location.href = this.options[this.selectedIndex].value">
+                    <option value="" disabled selected hidden>Выберите пользователя<div class="person-icon"><img src="images/person.png" class="person-img"></div></option>
+                    <option value="add-new.html"><button class="new-person"><img src="images/plus.png" class="img-plus-person"><div class="add-new-person">Подключить нового</div></button></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">  @gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">  @mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">  @coolweb</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">  @gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">  @mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">  @coolweb</div></option>
                 </select>
             </div>
+            <div class="popup-buttons-notif">
+              <div><button class="popup-cansel-notif" id="popup-cansel-notif">Отмена</button></div>
+              <div><button class="popup-save">Сохранить</button></div>
+            </div>
+            </div>
+            <div class="popupSettings" id="popupSettings">
+              <div class="setting-container"><div class="setting-items">UTM</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">utm_source</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">utm_campaign</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №1</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №2</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №3</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Номер заявки в РИЕС</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Ответственный риелтор</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Комментарий</div><img src="images/check.png" class="check-img"></div>
             </div>
         </div>
         </main>

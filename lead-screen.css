@@ -346,6 +346,7 @@ input {
 
 li {
     list-style-type: none;
+
    }
 
    .direction:hover {
@@ -621,7 +622,7 @@ li {
       
       .table-header,
       .table-rows{
-        padding: 9px;
+        padding: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -1040,9 +1041,13 @@ li {
     background: #C72323;
 }
 
+
+
 .plane {
     margin-left: 100px;
     display: none;
+    border: none;
+    background: none;
 }
 
 .plane-active {
@@ -1076,7 +1081,7 @@ li {
     visibility: hidden;
 }
 
-.show-popup-add-person {
+.show-popup-notif {
     visibility: unset;
 }
 
@@ -1178,4 +1183,121 @@ li {
 
 .person-choose {
     border: none;
+    width: 355px;
+}
+
+select {
+    -moz-appearance: none;
+    border: none;
+    position: relative;
+    outline: none;
+}
+
+.popup-save {
+    width: 170px;
+    height: 44px; 
+    background: #468DFF;
+    border: 1px solid #468DFF;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    justify-content: center;
+    margin-left: 16px;
+}
+.popup-save:hover {
+    background: #0F6BFF;
+}
+
+.popup-cansel-notif {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: #D0D5DD;
+    width: 170px;
+    height: 44px;
+    color: #344054;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.popup-cansel-notif:hover {
+    background: #F9F9F9;
+
+}
+
+.popup-buttons-notif {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 24px;
+}
+
+.telegram-id-choose {
+    margin-left: 3px;
+}
+
+.popupSettings {
+height: 400px;
+width: 320px;
+position: absolute;
+background: #FFFFFF;
+box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+border-radius: 8px;
+margin-left: 1055px;
+margin-top: -846px;
+visibility: hidden;
+}
+
+.show-settings {
+    visibility: unset;
+}
+
+.setting-container {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 14px;
+gap: 8px;
+width: 320px;
+height: 44px;
+background:white;
+}
+.setting-items {
+width: 320px;
+height: 24px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+color: #101828;
+}
+
+.active-settings {
+background: #F6F9FF;
+}
+
+.check-img {
+    visibility: hidden;
+}
+
+.check-active {
+    visibility: unset;
 }

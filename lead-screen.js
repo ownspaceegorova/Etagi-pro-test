@@ -123,5 +123,30 @@ for (i = 0; directionRent.length > i; i++) {
       }
   }
 }
+  
+let popupPlane = document.getElementsByClassName('img-plane');
+for (i = 0; popupPlane.length > i; i++) {
+popupPlane[i].onclick = function() {
+let popupNotif = document.getElementById('popupNotif');
+popupNotif.classList.add('show-popup-notif');
+let popupCloseNotif = document.getElementById("popup-cansel-notif");
+popupCloseNotif.onclick = function closePopupWindoNotif () {
+  popupNotif.classList.remove("show-popup-notif");
+}
+  }
+}
+
+let settingsIcon = document.getElementById('settings-icon')
+settingsIcon.onclick = function () {
+  let popupSettings = document.getElementById('popupSettings');
+  popupSettings.classList.toggle('show-settings');
+  let settingContainer = document.getElementsByClassName('setting-container');
+  for (i = 0; settingContainer.length > i; i++) {
+  settingContainer[i].onclick = function() {
+  this.classList.toggle('active-settings');
+  this.querySelector('.check-img').classList.toggle ('check-active');
+}
+}
+}
 
 
