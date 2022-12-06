@@ -148,3 +148,9 @@ settingsIcon.onclick = function () {
 }
 }
 }
+
+
+let newPerson = document.querySelector('.new-person')
+newPerson.onclick = function () {
+  window.open('add-new.html');
+}

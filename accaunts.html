@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="accaunts.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
+        <title>Lead Monitor</title>
+    </head>
+    <body>
+        <div class='header'>
+            <div class="header-enter-window">
+                <div class="header-logo">
+                    <img src="images/enter-window-logo.png" class="enter-window-logo">
+                    <div class="h1-enter-window"><a href='lead-screen.html'>LeadMonitor</a></div>
+                </div>
+                <div class="header-blocks">
+                    <div class="city-block">
+                        <select class="city-choose">
+                            <option>Тюмень</option>
+                            <option>Сургут</option>
+                            <option>Тобольск</option>
+                            <option>Ялуторовск</option>
+                        </select>
+                    </div>
+                    <div class="login-form">
+                     <img src="images/Icon.png" class="icon-login">
+                     <div class="login-name"><a href='accaunts.html'>tyumen@solop</a></div>
+                    </div>
+                </div>
+                <div class="popup" id="popupArchive">
+                  <div class="popup-title">
+                      <div class="aletr-img"><img src="images\pupup-alert.png"></div>
+                      <span class="popup-text">Архивировать эти заявки?</span>
+                  </div>
+                  <div class="popup-buttons">
+                    <button class="popup-cansel" id="popup-cansel">Отмена</button>
+                    <button class="popup-archive">Архивировать</button>
+                  </div>
+                  </div>
+            </div>
+        </div>
+        <div class="line"> <img src="images/Divider.png" class="img-line"></div>
+        <main>
+            <div class="city-and-filter">
+            <div class="accaunt-block"><span class="chosen-accaunt">Аккаунты</span></div>
+            <div class="accaunt-filter">
+                <form id="accaunt-filter">
+                  <div class="buttoms-menu">
+                  <div class="aup"><button class="aup-active"><a href="#aup">АУП</a></button></div>
+                  <div class="city"><button class="city-button">Города</button></div>
+                  <div class="users"><button class="users-button">Пользователи</button></div>
+                </div>
+                <div class="sarch-and-add">
+                <div class="lead-search">
+                    <input class="search-form lead-form" type="text" name="lead-text" placeholder="Найти">
+                </div>
+                <div class="add-new-accaunt"><button class="add-new-accaunt-button">+ Добавить аккаунт</button></div>
+                </div>
+          </div>
+            </div>
+            <div class="main-content-page">
+            <div class="menu-select">
+                <ul class="menu">
+                    <li><button class="active-direction">Аккаунты </button></li>
+                    <li><button class="direction">Оповещения</button></li>
+                    <li><button class="direction">Часовой пояс</button></li>
+                    <li><button class="direction">История</button></li>
+                    <li><button class="direction exit">Выйти</button></li>
+                   </ul>
+            </div>
+            <div class="table-screen">
+                <table class="main-table">
+                    <thead class="main-table-head">
+                      <tr class="main-table-tr">
+                        <th data-type="text-short" class="table-header">Имя и аккаунт<img src="images/arrow.png" class="arrow-img"> <span class="resize-handle"></span></th>
+                    <th data-type="text-long" class="table-header">Доступные города<span class="resize-handle"></span></th>
+                      </tr>
+                    </thead>
+                    <tbody class="main-table-body">
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <tr class="main-table-tr">
+                            <td class="table-rows fio">Иван Петров</td>
+                            <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio">Иван Петров</td>
+                        <td class="table-rows">+7 982 911 91 91</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                    <table class="settings-table">
+                        <thead class="main-table-head">
+                          <th data-type="icon-table" class="table-header fixed-side"></span></th>
+                        </thead>
+                        <tbody class="settings-table-body">
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                          <tr class="settings-table-tr">
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  
+                  
+            </div>
+        </div>
+        <div class="archive-dedicated" id="archive-dedicated"><button class="popup-button" id="popup-button"><img src="images\trash-red.png"><span class="archive-text">Архивировать выделенное</span></button></div>
+        <div class="send-notification" id="send-notification"></div>
+        <div class="footer">
+            <div class="number-leads">
+                <div class="text-of-number">Отображать:</div>
+                <div class="leads-number-background">
+                    <div><button class="amount-of-number choosen-number">20</div>
+                </div>
+                <div><button id="amount-of-number" class="amount-of-number">50</div>
+                <div><button class="amount-of-number">100 </div>
+                <div><button class="amount-of-number">Все</div>
+            </div>
+            <div class="number-of-page" id="number-of-page">
+                <div class="page-text-main">
+                    <div class="arrow-left"><img src="images/arrow-left.png"></div>
+                    <div><button class="page-text">Предыдущая</div>
+                </div>
+                <div class="page-number-background">
+                    <button class="page-number choosen-page">1</div>
+                <div><button class="page-number">2</div>
+                <div><button class="page-number">3</div>
+                <div><button class="page-number">...</div>
+                <div><button class="page-number">8</div>
+                <div><button class="page-number">9</div>
+                <div><button class="page-number">10</div>
+                    <div class="page-text-main">
+                        <div><button class="page-text">Следующая</div>
+                        <div class="arrow-left"><img src="images/arrow-right.png"></div>
+                    </div>
+                    <script src="accaunts.js"></script>
+            </div>
+            <div class="popupNotif" id="popupNotif">
+               <div class="popup-notif-title">
+                Подключить уведомления
+              </div>
+              <div class="popup-notif-subtitle">
+                Текущие пользователи получают уведомления:
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Петрова Анастасия (HR)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Иванов Ваня (риетор)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="person-to-send">
+                <div class="person-account">
+                  <div class="name-surname">Егорова Лиза (контекст ЦО)</div>
+                  <div class="telegram-id">@id-аккаунта-телеграм</div>
+                </div>
+                <div class="notif-status"><button class="notif-status">Отключить</button></div>
+              </div>
+              <div class="add-person">Добавить</div>
+              <div class="person-block">
+                <select class="person-choose" onchange="window.location.href = this.options[this.selectedIndex].value">
+                    <option value="" disabled selected hidden>Выберите пользователя<div class="person-icon"><img src="images/person.png" class="person-img"></div></option>
+                    <option value="add-new.html"><button class="new-person"><img src="images/plus.png" class="img-plus-person"><div class="add-new-person">Подключить нового</div></button></option>
+                    <option value= ><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">  @gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">  @mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">  @coolweb</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Гном Гномыч</div><div class="telegram-id-choose">  @gnom</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Егоров Михил</div><div class="telegram-id-choose">  @mcegorov</div></option>
+                    <option><div class="person-icon"><img src="images/person.png" class="person-img"><div class="main-name">Дмитрий Солоп</div><div class="telegram-id-choose">  @coolweb</div></option>
+                </select>
+            </div>
+            <div class="popup-buttons-notif">
+              <div><button class="popup-cansel-notif" id="popup-cansel-notif">Отмена</button></div>
+              <div><button class="popup-save">Сохранить</button></div>
+            </div>
+            </div>
+            <div class="popupSettings" id="popupSettings">
+              <div class="setting-container"><div class="setting-items">UTM</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">utm_source</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">utm_campaign</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №1</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №2</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Поля прозвона №3</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Номер заявки в РИЕС</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Ответственный риелтор</div><img src="images/check.png" class="check-img"></div>
+              <div class="setting-container"><div class="setting-items">Комментарий</div><img src="images/check.png" class="check-img"></div>
+            </div>
+        </div>
+        </main>
