@@ -440,7 +440,7 @@ li {
     align-items: baseline;
     justify-content: space-between;
   }
-
+  
 
     .table-screen {
         margin-left: 324px;
@@ -457,7 +457,8 @@ li {
         overflow-x: scroll;
         grid-template-columns: 
         minmax(296px, 296px)
-        minmax(733px, 733px)
+        minmax(680px, 680px)
+        minmax(85px, 85px)
       }
       
 ::-webkit-scrollbar {
@@ -466,9 +467,11 @@ li {
 
       .main-table-head,
       .main-table-body,
-      .main-table-tr {
+      tr {
         display: contents;
       }
+
+
       
       .table-header,
       .table-rows{
@@ -477,7 +480,9 @@ li {
         text-overflow: ellipsis;
         white-space: nowrap;
       }
-      
+
+
+
       .table-header {
         top: 0;
         font-family: 'Inter';
@@ -527,12 +532,28 @@ li {
         display: flex;
         align-items: center;
       }
+
     
-      .trash-icon {
-        filter: grayscale(100%);
-    }
+.id-personal {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #667085;
+
+}
+
+.trash-icon {
+    filter: grayscale(100%);
+}
        .trash-icon:hover {
        filter: none;
+    }
+
+    .pen-icon {
+        margin-left:28px ;
+        filter: brightness(1.3) contrast(50%);
     }
 
     .settings-icon {
@@ -542,14 +563,46 @@ li {
         filter: none;
     }
 
-      .fio {
-        color: #101828;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-      }
+.fio {
+    color: #101828;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.city-amount {
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 82px 82px 82px; 
+    grid-template-rows: 22px; 
+    gap: 10px 10px; 
+    grid-template-areas: ". . ."; 
+}
+
+.city-person {
+    width: 66px;
+    height: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #344054;
+}
+
+.city-border {
+    border-radius: 16px;
+    background: #F2F4F7;
+    background-size: 6px;
+    display: inline;
+    white-space: pre-wrap;
+    padding: 2px 9px;
+    width: max-content;
+}
 
 .text-line {
     text-decoration: underline #667085;
@@ -583,28 +636,6 @@ li {
     padding: 2px 12px;   
 }
 
-.potrebnost-border {
-    border-radius: 16px;
-    background: #ECFDF3;
-    background-size: 6px;
-    display: inline;
-    white-space: pre-wrap;
-    padding: 2px 12px;
-}
-
-.potrebnost {
-    color: #027A48;
-    margin-left: -2px;
-}
-
-
-
-
-.settings-table {
-    margin-top: -1.8px;
-    margin-left: -10px;
-    height: 3px;
-}
 
 
 .fixed-side {

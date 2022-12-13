@@ -9,9 +9,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
         <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
         <title>Lead Monitor</title>
     </head>
@@ -39,11 +36,11 @@
                 <div class="popup" id="popupArchive">
                   <div class="popup-title">
                       <div class="aletr-img"><img src="images\pupup-alert.png"></div>
-                      <span class="popup-text">Архивировать эти заявки?</span>
+                      <span class="popup-text">Удалить этот аккаунт?</span>
                   </div>
                   <div class="popup-buttons">
                     <button class="popup-cansel" id="popup-cansel">Отмена</button>
-                    <button class="popup-archive">Архивировать</button>
+                    <button class="popup-archive">Удалить</button>
                   </div>
                   </div>
             </div>
@@ -83,93 +80,78 @@
                       <tr class="main-table-tr">
                         <th data-type="text-short" class="table-header">Имя и аккаунт<img src="images/arrow.png" class="arrow-img"> <span class="resize-handle"></span></th>
                     <th data-type="text-long" class="table-header">Доступные города<span class="resize-handle"></span></th>
+                    <th data-type="text-long" class="table-header"> <span class="resize-handle"></span></th>
                       </tr>
                     </thead>
                     <tbody class="main-table-body">
                       <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
-                      </tr>
-                      <tr class="main-table-tr">
+                        <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
+                        <div class="id-personal">aup@chekusov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
+                          <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                          </tr>
                         <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
+                          <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                       </tr>
-                      <tr class="main-table-tr">
                         <tr class="main-table-tr">
-                            <td class="table-rows fio">Иван Петров</td>
-                            <td class="table-rows">+7 982 911 91 91</td>
+                            <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                              <div class="id-personal">aup@egorov</div></div></td>
+                            <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
+                              <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
+                                <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                       </tr>
                       <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
+                          <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
+
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+
                       </tr>
                       <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
+                          <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                          </tr>
+
+                      <tr class="main-table-tr">
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
+                          <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
+
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+
                       </tr>
                       <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
+                          <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
+
+                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+
                       </tr>
                       <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
-                      </tr>
-                      <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
-                      </tr>
-                      <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
-                      </tr>
-                      <tr class="main-table-tr">
-                        <td class="table-rows fio">Иван Петров</td>
-                        <td class="table-rows">+7 982 911 91 91</td>
+                        <td class="table-rows fio"><div class="personal-name">Егоров Михаил
+                          <div class="id-personal">aup@egorov</div></div></td>
+                        <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
+                          <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
+                        <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+
                       </tr>
                     </tbody>
                   </table>
                   
-                    <table class="settings-table">
-                        <thead class="main-table-head">
-                          <th data-type="icon-table" class="table-header fixed-side"></span></th>
-                        </thead>
-                        <tbody class="settings-table-body">
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                          <tr class="settings-table-tr">
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"></td>
-                          </tr>
-                        </tbody>
-                    </table>
-                  
-                  
+              
             </div>
         </div>
         <div class="archive-dedicated" id="archive-dedicated"><button class="popup-button" id="popup-button"><img src="images\trash-red.png"><span class="archive-text">Архивировать выделенное</span></button></div>

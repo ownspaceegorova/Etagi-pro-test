@@ -24,36 +24,13 @@ for (i = 0; number.length > i; i++) {
   };
 }
 
-let checkboxesPrevios = document.getElementsByClassName('fake');
-let archiveLeads = document.getElementById('archive-dedicated');
-for(let i=0; i<checkboxesPrevios.length;i++){
-  checkboxesPrevios[i].addEventListener('click', ChangeCheckboxStyle);
-}
 
-function ChangeCheckboxStyle () {
-  if (this.classList.contains ('fake')){
-  this.classList.remove('fake');
-  this.classList.add('chek');
-  }else {
-    this.classList.remove('chek');
-    this.classList.add('fake');
-  }
-  checkArxiv();
-  if (this.classList.contains('chek')) {
-    archiveLeads.classList.add('active');
-  }else {
-    archiveLeads.classList.remove('active');
-  }
-}
-
-function checkArxiv(){
-
-}
-
-let popup = document.getElementById("popupArchive");
+let popup = document.getElementsByClassName("trash-icon");
 let popupButton = document.getElementById("popup-button");
+for (i = 0; popup.length > i; i++) {
 popupButton.onclick = function PopUpShow() {
   popup.classList.toggle("show");
+}
 }
 
 let popupClose =  document.getElementById ("popup-cansel");
