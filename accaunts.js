@@ -24,110 +24,26 @@ for (i = 0; number.length > i; i++) {
   };
 }
 
-
-let popup = document.getElementsByClassName("trash-icon");
-let popupButton = document.getElementById("popup-button");
-for (i = 0; popup.length > i; i++) {
-popupButton.onclick = function PopUpShow() {
+let trashIcon = document.getElementsByClassName("trash-icon");
+for (i = 0; trashIcon.length > i; i++) {
+  trashIcon[i].onclick = function() {
+    let popup = document.getElementById('popupArchive');
+    popup.classList.toggle('show');
+  }
+  let popupClose =  document.getElementById ("popup-cansel");
+  popupClose.onclick = function  () {
+  let popup = document.getElementById('popupArchive');
   popup.classList.toggle("show");
 }
 }
 
-let popupClose =  document.getElementById ("popup-cansel");
-popupClose.onclick = function closePopupWindow () {
-  popup.classList.toggle("show");
-}
-
-let emptyCustom = document.getElementById("custom-button");
-let parent = document.getElementById("direction-botton");
-emptyCustom.onclick = function createCustom () {
-    emptyCustom.parentNode.removeChild(emptyCustom);
-    let botton = document.createElement("botton");
-    botton.innerHTML = "Кастомное";
-    parent.appendChild(botton);
-    botton.classList.add('direction-rent'); 
-}
-
-
-let menu = document.getElementsByClassName('menu');
-let direction = document.getElementsByClassName('direction');
-for (i = 0; direction.length > i; i++) {
-  direction[i].onclick = function() {
-    let childPlane = this.querySelector('.plane');
-    let childCircle = this.querySelector('.container-number')
-    if (this.classList.contains ('direction')){
-      this.classList.remove('direction');
-      this.classList.add('active-direction');
-      if (this.classList.contains ('active-direction')) {
-      childPlane.classList.toggle('plane-active')
-      childCircle.classList.toggle('container-number-hide')
-     }
-      }
-    
-      else {
-        this.classList.remove('active-direction');
-        this.classList.add('direction');
-        childPlane.classList.remove('plane-active')
-        childPlane.classList.add('plane')
-        childCircle.classList.remove('container-number-hide')
-        childCircle.classList.add('container-number')
-      }
-
-}
-}
-
-let directionRent = document.getElementsByClassName('direction-rent');
-for (i = 0; directionRent.length > i; i++) {
-  directionRent[i].onclick = function() {
-    let childPlane = this.querySelector('.plane');
-    let childCircle = this.querySelector('.container-number')
-    if (this.classList.contains ('direction-rent')){
-      this.classList.remove('direction-rent');
-      this.classList.add('direction-rent-active');
-      if (this.classList.contains ('direction-rent-active')) {
-      childPlane.classList.toggle('plane-active')
-      childCircle.classList.toggle('container-number-hide')
-     }
-      }
-    
-      else {
-        this.classList.remove('direction-rent-active');
-        this.classList.add('direction-rent');
-        childPlane.classList.remove('plane-active')
-        childPlane.classList.add('plane')
-        childCircle.classList.remove('container-number-hide')
-        childCircle.classList.add('container-number')
-      }
-  }
-}
-  
-let popupPlane = document.getElementsByClassName('img-plane');
-for (i = 0; popupPlane.length > i; i++) {
-popupPlane[i].onclick = function() {
-let popupNotif = document.getElementById('popupNotif');
-popupNotif.classList.add('show-popup-notif');
-let popupCloseNotif = document.getElementById("popup-cansel-notif");
-popupCloseNotif.onclick = function closePopupWindoNotif () {
-  popupNotif.classList.remove("show-popup-notif");
-}
-  }
-}
-
-let settingsIcon = document.getElementById('settings-icon')
-settingsIcon.onclick = function () {
-  let popupSettings = document.getElementById('popupSettings');
-  popupSettings.classList.toggle('show-settings');
-  let settingContainer = document.getElementsByClassName('setting-container');
-  for (i = 0; settingContainer.length > i; i++) {
-  settingContainer[i].onclick = function() {
-  this.classList.toggle('active-settings');
-  this.querySelector('.check-img').classList.toggle ('check-active');
-}
+let penIcon = document.getElementsByClassName("pen-icon");
+for (i = 0; penIcon.length > i; i++) {
+  penIcon[i].onclick = function() {
+    console.log('click');
+    let popupSet = document.getElementById('popup-set');
+    popupSet.classList.toggle('show-popup-set');
 }
 }
 
 
-let newPerson = document.querySelector('.new-person')
-newPerson.onclick = function () {
-  window.open('add-new.html');
-}
