@@ -152,13 +152,22 @@ main {
     align-items: baseline;
 }
 
-.aup {
-    width: 93px;
+.but {
+    width: 112px;
     height: 20px;
+    border: none;
+    background: none;
+    color: #667085;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
 }
 
-.aup-active {
-    width: 93px;
+
+.but-active {
+    width: 112px;
     height: 36px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
@@ -173,52 +182,6 @@ main {
     border: 1px solid #D0D5DD;
 }
 
-.city {
-    width: 93px;
-    height: 20px;
-}
-
-.city-active {
-    width: 93px;
-    height: 36px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
-    border-radius: 6px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #0F6BFF;
-    text-align: center;
-    border: 1px solid #D0D5DD;
-}
-
-.users {
-    width: 93px;
-    height: 20px;
-}
-
-.users-active {
-        width: 93px;
-    height: 36px;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06);
-    border-radius: 6px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    color: #0F6BFF;
-    text-align: center;
-    border: 1px solid #D0D5DD;
-}
-
-.aup-button {
-border: none;
-background: none;
-}
 
 .city-button {
     width: 93px;
@@ -867,6 +830,17 @@ li {
     margin-right: -121px;
 }
 
+.popup-set-fio {
+    visibility: hidden;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+    width: 0px;
+    margin-left: 520px;
+    margin-top: -664px;
+    margin-right: -121px;
+}
+
 .show-popup-set {
     visibility: unset;
     -webkit-animation: fadeIn 1s;
@@ -881,11 +855,30 @@ li {
     box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
     border-radius: 12px;
     margin-left: 520px;
-    margin-top: -664px;
-    position: relative;
-    padding: 24px;
-    
+    margin-top: 340px;
+    position: absolute;
+    padding: 24px; 
 }
+
+.show-popup-set-fio {
+    visibility: unset;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    width: 608px;
+    height: 391px;
+    display: block;
+    align-items: center;
+    padding: 24px;
+    gap: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    border-radius: 12px;
+    margin-left: 520px;
+    margin-top: 340px;
+    position: absolute;
+    padding: 24px; 
+}
+
 .popup-set-text {
     display: block;
 }
@@ -902,7 +895,7 @@ li {
 }
 
 .popup-set-subtitle {
-    width: 101px;
+    width: 250px;
     height: 20px;
     font-family: 'Inter';
     font-style: normal;
@@ -1020,3 +1013,76 @@ a {
     color: unset;
 }
 
+.pen-icon-table2 {
+    margin-left:28px ;
+    filter: brightness(1.3) contrast(50%);
+}
+
+.pen-icon-table2:hover {
+    filter: none;
+}
+
+.popup-set-city {
+    visibility: hidden;
+    cursor: pointer;
+    display: none;
+    user-select: none;
+    width: 0px;
+    margin-left: 520px;
+    margin-top: -664px;
+    margin-right: -121px;
+}
+
+.show-popup-set-city {
+    visibility: unset;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    width: 608px;
+    height: 262px;
+    display: block;
+    align-items: center;
+    padding: 24px;
+    gap: 32px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 8px 8px -4px rgba(16, 24, 40, 0.04);
+    border-radius: 12px;
+    margin-left: 520px;
+    margin-top: 340px;
+    position: absolute;
+    padding: 24px; 
+}
+
+#table-screen-city {
+    display: none;
+}
+
+#table-screen-users {
+    display: none;
+}
+
+
+.popup-cansel-city{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 18px;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    border-radius: 8px;
+    color: #D0D5DD;
+    width: 284px;
+    height: 44px;
+    color: #344054;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.popup-cansel-city:hover {
+    background: #F9F9F9;
+}
