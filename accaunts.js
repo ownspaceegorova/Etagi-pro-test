@@ -64,6 +64,59 @@ let popupCloseSetFio =  document.getElementById ("button-cansel-set-fio");
     setFio.classList.toggle("show-popup-set-fio");
 }
 
+
+let penIconTable2 = document.getElementsByClassName("pen-icon-table2");
+for (i = 0; penIconTable2.length > i; i++) {
+  penIconTable2[i].onclick = function() {
+  let popupSetCity = document.getElementById('popup-set-city');
+  popupSetCity.classList.toggle('show-popup-set-city');
+}
+let popupCloseCity =  document.getElementById ("button-cansel-city");
+popupCloseCity.onclick = function  () {
+let popupSetCity = document.getElementById('popup-set-city');
+popupSetCity.classList.toggle("show-popup-set-city");
+}
+}
+
+let penIconTableUsers = document.getElementsByClassName("pen-icon-users");
+for (i = 0; penIconTableUsers.length > i; i++) {
+  penIconTableUsers[i].onclick = function() {
+  let popupSetUsers = document.getElementById('popup-users');
+  popupSetUsers.classList.toggle('show-popup-users');
+}
+let popupCloseUsers =  document.getElementById ("button-cansel-users");
+popupCloseUsers.onclick = function  () {
+let popupSetUsers = document.getElementById('popup-users');
+popupSetUsers.classList.toggle("show-popup-users");
+}
+}
+
+let trashIconUsers = document.getElementsByClassName("trash-icon-users");
+for (i = 0; trashIconUsers.length > i; i++) {
+  trashIconUsers[i].onclick = function() {
+    let popupDelete = document.getElementById('popupDelete');
+    popupDelete.classList.toggle('show');
+  }
+  let popupClose = document.getElementById ("popup-delete");
+  popupClose.onclick = function  () {
+  let popup = document.getElementById('popupDelete');
+  popup.classList.toggle("show");
+}
+}
+
+let penIconNotif = document.getElementsByClassName("pen-icon-notif");
+for (i = 0; penIconNotif.length > i; i++) {
+  penIconNotif[i].onclick = function() {
+  let popupNotif = document.getElementById('popup-notif');
+  popupNotif.classList.toggle('show-popup-notif');
+}
+let popupCloseNotif =  document.getElementById ("button-cansel-notif");
+popupCloseNotif.onclick = function  () {
+let popupNotif = document.getElementById('popup-notif');
+popupNotif.classList.toggle("show-popup-notif");
+}
+}
+
 function openTable(evt, tableName) {
  
   var i, tableScreen, tablinks;
@@ -81,16 +134,24 @@ function openTable(evt, tableName) {
   evt.currentTarget.className += "but-active";
 }
 
-let penIconTable2 = document.getElementsByClassName("pen-icon-table2");
-for (i = 0; penIconTable2.length > i; i++) {
-  penIconTable2[i].onclick = function() {
-    console.log('click')
-  let popupSetCity = document.getElementById('popup-set-city');
-  popupSetCity.classList.toggle('show-popup-set-city');
-}
-let popupCloseCity =  document.getElementById ("button-cansel-city");
-popupCloseCity.onclick = function  () {
-let popupSetCity = document.getElementById('popup-set-city');
-popupSetCity.classList.toggle("show-popup-set-city");
-}
+function openTableMenu(evt, tableName, headerName) {
+ 
+  var i, tableScreen, headerScreen, tablinks;
+  tableScreen = document.getElementsByClassName("table-screen");
+  for (i = 0; i < tableScreen.length; i++) {
+    tableScreen[i].style.display = "none";
+  }
+  headerScreen = document.getElementsByClassName("city-and-filter");
+  for (i = 0; i < headerScreen.length; i++) {
+    headerScreen[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("active-direction", "");
+  }
+
+  document.getElementById(tableName).style.display = "block";
+  document.getElementById(headerName).style.display = "flex";
+  evt.currentTarget.className += "active-direction";
 }
