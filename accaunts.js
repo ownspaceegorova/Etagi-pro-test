@@ -117,6 +117,19 @@ popupNotif.classList.toggle("show-popup-notif");
 }
 }
 
+let penIconClock = document.getElementsByClassName("pen-icon-clock");
+for (i = 0; penIconClock.length > i; i++) {
+  penIconClock[i].onclick = function() {
+  let popupSetClock = document.getElementById('popup-set-clock');
+  popupSetClock.classList.toggle('show-popup-set-clock');
+}
+let popupCloseClock =  document.getElementById ("button-cansel-clock");
+popupCloseClock.onclick = function  () {
+let popupSetClock = document.getElementById('popup-set-clock');
+popupSetClock.classList.toggle("show-popup-set-clock");
+}
+}
+
 function openTable(evt, tableName) {
  
   var i, tableScreen, tablinks;

@@ -7,8 +7,13 @@
         <link rel="stylesheet" href="accaunts.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="daterangepicker.css" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Yeseva+One&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
         <title>Lead Monitor</title>
     </head>
     <body>
@@ -154,6 +159,19 @@
               <button class="button-save">Сохранить</button>
             </div>
         </div>
+        <div class="popup-set-clock" id="popup-set-clock">
+          <div class="popup-set-text">
+              <div class="popup-set-title">Тюмень</div>
+          </div>
+          <div class="city-blocks">
+            <div class="add-city">Изменить часовой пояс</div>
+            <div class="add-city-input-div"><input class="add-city-input" type="text" placeholder="Екатеринбург (МСК +02:00)"></div>
+          </div>
+          <div class="popup-buttons-set-div">
+            <button class="popup-cansel-clock" id="button-cansel-clock">Отмена</button>
+            <button class="button-save">Сохранить</button>
+          </div>
+      </div>
             </div>
         </div>
         <div class="line"> <img src="images/Divider.png" class="img-line"></div>
@@ -191,19 +209,63 @@
                 <div class="accaunt-block"><span class="chosen-accaunt">Тюмень</span></div>
                 <div class="accaunt-filter">
                     <div class="sarch-and-add-notif">
-                    <div class="lead-search">
+                    <div class="lead-search-clock">
                         <input class="search-form lead-form" type="text" name="lead-text" placeholder="Найти">
                     </div>
                     </div>
               </div>
                 </div>
+                <div class="city-and-filter history" id="history-view-header">
+                  <div class="chosen-city-block"><span class="chosen-city">Тюмень</span></div>
+                  <div class="lead-filter-history">
+                      <form id="lead-filter-history">
+                      <div class="lead-search-history">
+                          <div class="search-title lead">Поиск</div>
+                          <input class="search-form lead-form-history" type="text" name="lead-text" placeholder="Найти">
+                      </div>
+                      <div class="status-filter">
+                          <div class="status">
+                              <div class="search-title lead">Статус</div>
+                              <div class="status-block">
+                                  <select class="status-choose">
+                                      <option>Все</option>
+                                      <option>Нет ответа (Н/О)</option>
+                                      <option>Отказ</option>
+                                      <option>С потребностью</option>
+                                  </select>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="source-filter">
+                          <div class="sourse">
+                              <div class="search-title lead">Источник</div>
+                              <div class="source-block">
+                                  <select class="source-choose">
+                                      <option>Все</option>
+                                      <option>Яндекс</option>
+                                      <option>Вконтакте</option>
+                                      <option>Авито</option>
+                                  </select>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="datapicker-calendar">
+                          <div class="search-title lead">Период</div>
+                          <input type="text" name="daterange" value="07.07.2022 - 08.07.2022" class="caledar-form"/>
+                      </div>
+                  <div class="reset-button-history">
+                      <button class="reset-his" type="reset" form="lead-filter-history">Сбросить</button>
+                  </div>
+                  </form>
+                  </div>
+                  </div>
             <div class="main-content-page">
             <div class="menu-select">
                 <ul class="menu">
                     <li><button class="direction active-direction tablinks " onclick="openTableMenu(event, 'table-screen-aup' , 'accaunts-view-header' )"  >Аккаунты </button></li>
                     <li><button class="direction tablinks " onclick="openTableMenu(event, 'table-screen-notif' , 'notif-view-header')" >Оповещения</button></li>
                     <li><button class="direction tablinks " onclick="openTableMenu(event, 'table-screen-clock' , 'clock-view-header')">Часовой пояс</button></li>
-                    <li><button class="direction tablinks ">История</button></li>
+                    <li><button class="direction tablinks " onclick="openTableMenu(event, 'table-screen-history' , 'history-view-header')">История</button></li>
                     <li><button class="direction exit">Выйти</button></li>
                    </ul>
             </div>
@@ -222,21 +284,21 @@
                         <div class="id-personal">aup@chekusov</div></div></td>
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                           <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                           </tr>
                         <tr class="main-table-tr">
                         <td class="table-rows fio"><div class="personal-name">Егоров Михаил
                           <div class="id-personal">aup@egorov</div></div></td>
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                           <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                       </tr>
                         <tr class="main-table-tr">
                             <td class="table-rows fio"><div class="personal-name">Егоров Михаил
                               <div class="id-personal">aup@egorov</div></div></td>
                             <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                               <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
-                                <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                                <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                       </tr>
                       <tr class="main-table-tr">
                         <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -244,7 +306,7 @@
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                           <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
 
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
 
                       </tr>
                       <tr class="main-table-tr">
@@ -252,7 +314,7 @@
                           <div class="id-personal">aup@egorov</div></div></td>
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                           <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                           </tr>
 
                       <tr class="main-table-tr">
@@ -261,7 +323,7 @@
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                           <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
 
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
 
                       </tr>
                       <tr class="main-table-tr">
@@ -270,7 +332,7 @@
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                           <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
 
-                            <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                            <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
 
                       </tr>
                       <tr class="main-table-tr">
@@ -278,7 +340,7 @@
                           <div class="id-personal">aup@egorov</div></div></td>
                         <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                           <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
-                        <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
+                        <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -299,21 +361,21 @@
                       <td class="table-rows"><div class="city-amount">
                         <div class="city-border"><div class="city-person">tyumen@solop</div></div>
                         <div class="city-border"><div class="city-person">tyumen@solop</div></div></div></td>
-                        <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                        <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
                         </tr>
                       <tr class="main-table-tr">
                       <td class="table-rows fio"><div class="personal-name">Ялуторовск
                         <div class="id-personal">yalutorovsk</div></div></td>
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">yalutorovsk@sobchak</div></div>
                         <div class="city-border"><div class="city-person">yalutorovsk@ivanov</div></div><div class="city-border"><div class="city-person">yalutorovsk@sergeenko</div></div></div></td>
-                          <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                          <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
                     </tr>
                       <tr class="main-table-tr">
                           <td class="table-rows fio"><div class="personal-name">Челябинск
                             <div class="id-personal">chekyabinsk</div></div></td>
                           <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                             <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
-                              <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                              <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
                     </tr>
                     <tr class="main-table-tr">
                       <td class="table-rows fio"><div class="personal-name">Сургут
@@ -321,7 +383,7 @@
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                         <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
 
-                          <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                          <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
 
                     </tr>
                     <tr class="main-table-tr">
@@ -329,7 +391,7 @@
                         <div class="id-personal">tyumen</div></div></td>
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                         <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
-                          <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                          <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
                         </tr>
 
                     <tr class="main-table-tr">
@@ -338,7 +400,7 @@
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                         <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
 
-                          <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                          <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
 
                     </tr>
                     <tr class="main-table-tr">
@@ -347,7 +409,7 @@
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Краснодар</div></div>
                         <div class="city-border"><div class="city-person">Ялуторовск</div></div></div></td>
 
-                          <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                          <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
 
                     </tr>
                     <tr class="main-table-tr">
@@ -355,7 +417,7 @@
                         <div class="id-personal">surgut</div></div></td>
                       <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                         <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
-                      <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                      <td class="table-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -377,7 +439,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div></div></td>
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                           <div class="city-border"><div class="city-person">Аренда</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                     </tr>
                     <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -387,7 +449,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                       <div class="city-border"><div class="city-person">Аренда</div></div>
                       <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                      <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                      <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                   </tr>
                   <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -395,7 +457,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div></div></td>
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                           <div class="city-border"><div class="city-person">Аренда</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                     </tr>
                     <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -405,7 +467,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                       <div class="city-border"><div class="city-person">Аренда</div></div>
                       <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                      <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                      <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                   </tr>
                   <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -413,7 +475,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div></div></td>
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                           <div class="city-border"><div class="city-person">Аренда</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                     </tr>
                     <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -423,7 +485,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                       <div class="city-border"><div class="city-person">Аренда</div></div>
                       <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                      <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                      <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                   </tr>
                   <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -431,7 +493,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div></div></td>
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                           <div class="city-border"><div class="city-person">Аренда</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                     </tr>
                     <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -441,7 +503,7 @@
                     <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                       <div class="city-border"><div class="city-person">Аренда</div></div>
                       <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                      <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
+                      <td class="table-rows"><img src="images\trash-red.png" class="trash-icon"><img src="images\pen.png" class="pen-icon-users"></td>
                   </tr>
                 </tbody>
               </table>
@@ -463,7 +525,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border-green"><div class="img-dot"><img src="images/Dot-green.png" class="img-dot"></div><div class="status-connection-green">Активная</div></div></div></td>
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                  <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                  <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                   </tr>
                   <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -472,7 +534,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                     <div class="city-border"><div class="city-person">Аренда</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                 </tr>
                 <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -480,7 +542,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border-green"><div class="img-dot"><img src="images/Dot-green.png" class="img-dot"></div><div class="status-connection-green">Активная</div></div></div></td>
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                  <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                  <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                   </tr>
                   <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -489,7 +551,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                     <div class="city-border"><div class="city-person">Аренда</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                 </tr>
                 <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -497,7 +559,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border-green"><div class="img-dot"><img src="images/Dot-green.png" class="img-dot"></div><div class="status-connection-green">Активная</div></div></div></td>
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                  <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                  <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                   </tr>
                   <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -506,7 +568,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                     <div class="city-border"><div class="city-person">Аренда</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                 </tr>
                 <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Чекусов Евгений
@@ -514,7 +576,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border-green"><div class="img-dot"><img src="images/Dot-green.png" class="img-dot"></div><div class="status-connection-green">Активная</div></div></div></td>
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Вторичная</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                  <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                  <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                   </tr>
                   <tr class="main-table-tr">
                   <td class="table-rows fio"><div class="personal-name">Егоров Михаил
@@ -523,7 +585,7 @@
                   <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Загородная</div></div>
                     <div class="city-border"><div class="city-person">Аренда</div></div>
                     <div class="city-border"><div class="city-person">Новостройки</div></div></div></td>
-                    <td class="setting-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
+                    <td class="table-rows"><img src="images\trash-red.png" class="trash-icon-users"><img src="images\pen.png" class="pen-icon-notif"></td>
                 </tr>
               </tbody>
             </table>
@@ -543,28 +605,28 @@
                 <div class="id-personal">tyumen</div></div></td>
                 <td class="table-rows"><div class="city-amount">
                   <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                  <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                  <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
                   </tr>
                 <tr class="main-table-tr">
                 <td class="table-rows fio"><div class="personal-name">Ялуторовск
                   <div class="id-personal">yalutorovsk</div></div></td>
                   <td class="table-rows"><div class="city-amount">
                     <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                    <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                    <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
               </tr>
                 <tr class="main-table-tr">
                     <td class="table-rows fio"><div class="personal-name">Челябинск
                       <div class="id-personal">chekyabinsk</div></div></td>
                       <td class="table-rows"><div class="city-amount">
                         <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                        <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                        <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
               </tr>
               <tr class="main-table-tr">
                 <td class="table-rows fio"><div class="personal-name">Сургут
                   <div class="id-personal">surgut</div></div></td>
                   <td class="table-rows"><div class="city-amount">
                     <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                    <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                    <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
 
               </tr>
               <tr class="main-table-tr">
@@ -572,7 +634,7 @@
                   <div class="id-personal">tyumen</div></div></td>
                   <td class="table-rows"><div class="city-amount">
                     <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                    <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                    <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
                   </tr>
 
               <tr class="main-table-tr">
@@ -581,7 +643,7 @@
                   <td class="table-rows"><div class="city-amount">
                     <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
 
-                    <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                    <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
 
               </tr>
               <tr class="main-table-tr">
@@ -589,48 +651,83 @@
                   <div class="id-personal">achekyabinsk</div></div></td>
                   <td class="table-rows"><div class="city-amount">
                     <div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div></div></td>
-                    <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                    <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
               </tr>
               <tr class="main-table-tr">
                 <td class="table-rows fio"><div class="personal-name">Сургут
                   <div class="id-personal">surgut</div></div></td>
                 <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div>
                   <div class="city-border"><div class="city-person">Сургут</div></div><div class="city-border"><div class="city-person">Челябинск</div></div></div></td>
-                <td class="setting-rows"><img src="images\pen.png" class="pen-icon-table2"></td>
+                <td class="table-rows"><img src="images\pen.png" class="pen-icon-clock"></td>
               </tr>
             </tbody>
           </table>
     </div>
+    <div class="table-screen" id="table-screen-history">
+      <table class="main-table-history">
+          <thead class="main-table-head">
+            <tr class="main-table-tr">
+              <th data-type="text-short" class="table-header">Действие<img src="images/arrow.png" class="arrow-img"> <span class="resize-handle"></span></th>
+          <th data-type="text-long" class="table-header">Город<span class="resize-handle"></span></th>
+          <th data-type="text-long" class="table-header">Аккаунт<span class="resize-handle"></span></th>
+          <th data-type="text-long" class="table-header">День<span class="resize-handle"></span></th>
+            </tr>
+          </thead>
+          <tbody class="main-table-body">
+            <tr class="main-table-tr">
+              <td class="table-rows fio"><div class="personal-name">Новая заявка по вторичному - ID 235
+              </div></td>
+              <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Тюмень</div></div></div></td>
+              <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div>
+                    </div></td>
+              <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div>
+              </div></td>
+              </tr>
+              <tr class="main-table-tr">
+                <td class="table-rows fio"><div class="personal-name">Пользователь изменил...
+                </div></td>
+                <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Сургут</div></div></div></td>
+                <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div>
+                      </div></td>
+                <td class="table-rows"><div class="city-amount"><div class="city-border"><div class="city-person">Екатеринбург (МСК +02:00)</div></div>
+                </div></td>
+                </tr>
+          </tbody>
+        </table>
+  </div>
         </div>
         <div class="archive-dedicated" id="archive-dedicated"><button class="popup-button" id="popup-button"><img src="images\trash-red.png"><span class="archive-text">Архивировать выделенное</span></button></div>
         <div class="send-notification" id="send-notification"></div>
-        <div class="footer">
-            <div class="number-leads">
-                <div class="text-of-number">Отображать:</div>
-                <div class="leads-number-background">
-                    <div><button class="amount-of-number choosen-number">20</div>
-                </div>
-                <div><button id="amount-of-number" class="amount-of-number">50</div>
-                <div><button class="amount-of-number">100 </div>
-                <div><button class="amount-of-number">Все</div>
-            </div>
-            <div class="number-of-page" id="number-of-page">
-                <div class="page-text-main">
-                    <div class="arrow-left"><img src="images/arrow-left.png"></div>
-                    <div><button class="page-text">Предыдущая</div>
-                </div>
-                <div class="page-number-background">
-                    <button class="page-number choosen-page">1</div>
-                <div><button class="page-number">2</div>
-                <div><button class="page-number">3</div>
-                <div><button class="page-number">...</div>
-                <div><button class="page-number">8</div>
-                <div><button class="page-number">9</div>
-                <div><button class="page-number">10</div>
-                    <div class="page-text-main">
-                        <div><button class="page-text">Следующая</div>
-                        <div class="arrow-left"><img src="images/arrow-right.png"></div>
-                    </div>
-                    <script src="accaunts.js"></script>
-            </div>
+      
         </main>
+        <footer class="footer">
+          <div class="number-leads">
+              <div class="text-of-number">Отображать:</div>
+              <div class="leads-number-background">
+                  <div><button class="amount-of-number choosen-number">20</div>
+              </div>
+              <div><button id="amount-of-number" class="amount-of-number">50</div>
+              <div><button class="amount-of-number">100 </div>
+              <div><button class="amount-of-number">Все</div>
+          </div>
+          <div class="number-of-page" id="number-of-page">
+              <div class="page-text-main">
+                  <div class="arrow-left"><img src="images/arrow-left.png"></div>
+                  <div><button class="page-text">Предыдущая</div>
+              </div>
+              <div class="page-number-background">
+                  <button class="page-number choosen-page">1</div>
+              <div><button class="page-number">2</div>
+              <div><button class="page-number">3</div>
+              <div><button class="page-number">...</div>
+              <div><button class="page-number">8</div>
+              <div><button class="page-number">9</div>
+              <div><button class="page-number">10</div>
+                  <div class="page-text-main">
+                      <div><button class="page-text">Следующая</div>
+                      <div class="arrow-left"><img src="images/arrow-right.png"></div>
+                  </div>
+                  <script src="accaunts.js"></script>
+          </div>
+        </footer>
+    </body>

@@ -40,9 +40,9 @@ function ChangeCheckboxStyle () {
   }
   checkArxiv();
   if (this.classList.contains('chek')) {
-    archiveLeads.classList.add('active');
+    archiveLeads.classList.add('active-pos');
   }else {
-    archiveLeads.classList.remove('active');
+    archiveLeads.classList.remove('active-pos');
   }
 }
 
@@ -59,6 +59,19 @@ popupButton.onclick = function PopUpShow() {
 let popupClose =  document.getElementById ("popup-cansel");
 popupClose.onclick = function closePopupWindow () {
   popup.classList.toggle("show");
+}
+
+let trashIcon = document.getElementsByClassName("trash-icon");
+for (i = 0; trashIcon.length > i; i++) {
+  trashIcon[i].onclick = function() {
+    let popup = document.getElementById('popupArchive');
+    popup.classList.toggle('show');
+  }
+  let popupClose =  document.getElementById ("popup-cansel");
+  popupClose.onclick = function  () {
+  let popup = document.getElementById('popupArchive');
+  popup.classList.toggle("show");
+}
 }
 
 let emptyCustom = document.getElementById("custom-button");

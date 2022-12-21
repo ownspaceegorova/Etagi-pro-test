@@ -328,7 +328,7 @@ input {
 
 .menu-select {
     width: 234px;
-    margin-top: 102px;
+    margin-top: 62px;
     display: block;
     margin-right: 129px;
 }
@@ -907,7 +907,7 @@ li {
      display: none;
     }
 
-.active {
+.active-pos {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -1289,6 +1289,11 @@ width: 320px;
 height: 44px;
 background:white;
 }
+
+.setting-container:hover {
+    background:#F9FBFB;
+}
+
 .setting-items {
 width: 320px;
 height: 24px;
@@ -1315,4 +1320,13 @@ background: #F6F9FF;
 a {
     text-decoration: none;
     color: unset;
+}
+
+.footer {
+	position: sticky;
+	left: 0;
+	bottom: -29px;
+	width: 100%;
+	height: 80px;
+    background: white;
 }
